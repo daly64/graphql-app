@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 //0. instantiate the Prisma client
 const prisma = new PrismaClient();
@@ -11,11 +11,11 @@ export const prismaGetUserById = async (id: string) =>
   prisma.user.findUnique({ where: { id } });
 
 // 3. create a new user
-export const prismaCreateUser = (user: User) =>
+export const prismaCreateUser = (user: any) =>
   prisma.user.create({ data: user });
 
 // 4. update user by id
-export const prismaUpdateUser = async (id: string, user: User) => {
+export const prismaUpdateUser = async (id: string, user: any) => {
   return await prisma.user.update({
     where: { id: id },
     data: { ...user, name: user.name, score: user.score },
