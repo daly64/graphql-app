@@ -12,12 +12,13 @@ const Provider = ({
   children: React.ReactNode;
 }>) => {
   const client = new ApolloClient({
-    uri: "https://graphql-app-olive.vercel.app/api/graphql",
-   cache: new InMemoryCache(),
-
+    uri:
+      "https://graphql-app-olive.vercel.app/api/graphql" ||
+      "https://localhost:3000/api/graphql",
+    cache: new InMemoryCache(),
   });
 
-/*   const client = new ApolloClient({
+  /*   const client = new ApolloClient({
     link: new HttpLink({
       uri: "https://graphql-app-olive.vercel.app/api/graphql",
       fetchOptions: {
