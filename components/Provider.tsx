@@ -10,7 +10,6 @@ const Provider = ({
     uri:
       "http://localhost:3000/api/graphql" ||
       "https://graphql-app-olive.vercel.app/api/graphql",
-
     cache: new InMemoryCache(),
   });
   return <ApolloProvider client={client}>{children}</ApolloProvider>;
