@@ -1,6 +1,5 @@
 "use client";
 import { gql, useQuery, useMutation, useSubscription } from "@apollo/client";
-import { User } from "@prisma/client";
 
 // const allUsers = gql`
 //   subscription {
@@ -83,7 +82,7 @@ export default function Home() {
     deleteUserMutation({ variables: { id }, onCompleted: refetch });
   };
 
-  const onAddToScore = (id: string, user: User) => {
+  const onAddToScore = (id: string, user: any) => {
     onUpdateUser(id, { name: user.name, score: user.score + 1 });
   };
 
