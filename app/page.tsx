@@ -53,7 +53,7 @@ export default function Home() {
     loading: usersLoading,
     error: usersError,
     refetch,
-  } = useQuery(getAllUsers, { pollInterval: 0 });
+  } = useQuery(getAllUsers, { pollInterval: 3000 });
 
   const [createUserMutation] = useMutation(createUser, {
     refetchQueries: [getAllUsers],
