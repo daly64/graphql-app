@@ -13,9 +13,8 @@ const Provider = ({
 }>) => {
   const client = new ApolloClient({
     link: new HttpLink({
-      uri:
-        "https://graphql-app-olive.vercel.app/api/graphql" ||
-        "http://localhost:3000/api/graphql",
+      uri: "https://graphql-app-olive.vercel.app/api/graphql",
+      // "http://localhost:3000/api/graphql",
       fetchOptions: {
         mode: "no-cors",
       },
