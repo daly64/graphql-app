@@ -16,7 +16,7 @@ const Provider = ({
   // "http://localhost:3000/api/graphql"
 
   const client = new ApolloClient({
-    uri: process.env.NEXT_PUBLIC_VERCEL_URL + "/api/graphql",
+    uri: process.env.NEXT_PUBLIC_VERCEL_URL,
     cache: new InMemoryCache(),
   });
 
