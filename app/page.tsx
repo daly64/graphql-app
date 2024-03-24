@@ -1,15 +1,6 @@
 "use client";
 import { gql, useQuery, useMutation, useSubscription } from "@apollo/client";
 
-// const allUsers = gql`
-//   subscription {
-//     allUsers {
-//       id
-//       name
-//       score
-//     }
-//   }
-// `;
 
 const getAllUsers = gql`
   query {

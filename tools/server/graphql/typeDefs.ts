@@ -21,11 +21,6 @@ const typeDefs = gql`
     updateUser(id: ID!, input: UserInput!): User
     deleteUser(id: ID!): Boolean
   }
-
-  type Subscription {
-    numberIncremented: Int
-    allUsers: [User]
-  }
 `;
 
 export default typeDefs;
